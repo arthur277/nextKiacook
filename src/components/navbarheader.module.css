@@ -1,0 +1,39 @@
+.frontcss1{
+    display: flex;
+    justify-content: space-between;
+    background-color: #641300;
+    list-style-type: none; 
+
+    a{
+    
+        text-decoration: none;
+        color: white;
+        /* padding: 10px; */
+        padding-top: 8px;
+        padding-bottom: 8px;
+        float: left;
+        font-size: 16px;
+    }
+    .positionG{
+        order: 1;
+        margin-right: 50px;
+    }
+    .position{
+        display: flex;
+        margin-left: 50px;
+    }
+
+  
+    li {
+        display: inline-block; 
+        margin: 0 20px; 
+    }
+    
+    li a {
+        text-decoration: none;
+        color: white;
+        
+
+    }
+
+}

@@ -1,0 +1,16 @@
+.homeimage{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    min-height: 200px;
+    h1{
+        color: #f7722a;
+        font-family: sans-serif, Georgia, 'Times New Roman', Times, serif;
+        font-size: 33px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+}
+    
