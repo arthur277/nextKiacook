@@ -1,60 +1,44 @@
-// 'use client';
-// import { useSearchParams } from 'next/navigation';
-
-// function Page() {
-//   const searchParams = useSearchParams(); // Utilisation du hook pour accéder aux query parameters
-  
-//   const nom = searchParams.get('nom');
-//   const prenom = searchParams.get('prenom');
-//   const email = searchParams.get('email');
-
-//   return (
-//     <div>
-//       <h1>Bienvenue, {nom} {prenom}!</h1>
-//       <p>Email: {email}</p>
-//     </div>
-//   );
-// }
-
-// export default Page;
-
-'use client';
+"use client"
 import { useEffect, useState } from 'react';
-import { useSearchParams } from 'next/navigation';
 
-function page() {
-  const searchParams = useSearchParams();
-  const email = searchParams.get('email');
-  const [userData, setUserData] = useState(null);
+function Page() {
+  const [users, setUsers] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    if (email) {
-      const fetchUserData = async () => {
-        const response = await fetch(`/api/getUser?email=${email}`);
-        if (response.ok) {
-          const data = await response.json();
-          setUserData(data);
-        } else {
-          alert('Utilisateur non trouvé');
+
+    const fetchUsers = async () => {
+      try {
+        const response = await fetch('/api/getAllUser');
+        if (!response.ok) {
+          throw new Error('Erreur de récupération des utilisateurs');
         }
-      };
+        const data = await response.json();
+        setUsers(data);
+      } catch (error) {
+        setError(error.message);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-      fetchUserData();
-    }
-  }, [email]);
+    fetchUsers();
+  }, []);
 
-  if (!userData) {
-    return <p>Chargement des données...</p>;
-  }
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error}</div>;
 
   return (
     <div>
-      <h1>Bienvenue, {userData.nom} {userData.prenom}!</h1>
-      <p>Email: {userData.email}</p>
+      <h1>Liste des utilisateurs</h1>
+      <ul>
+        {users.map((user) => (
+          <li key={user.id}>{user.name} - {user.email}</li>  
+        ))}
+      </ul>
     </div>
   );
 }
 
-export default page;
-
-
+export default Page;
