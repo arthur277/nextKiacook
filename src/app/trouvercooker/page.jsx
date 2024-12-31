@@ -1,44 +1,35 @@
 "use client"
 import { useEffect, useState } from 'react';
 
-function Page() {
-  const [users, setUsers] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+function page() {
+  const [fields, setFields] = useState([]);
 
   useEffect(() => {
-
-    const fetchUsers = async () => {
+    async function fetchFields() {
       try {
         const response = await fetch('/api/getAllUser');
         if (!response.ok) {
-          throw new Error('Erreur de récupération des utilisateurs');
+          throw new Error('Erreur réseau');
         }
         const data = await response.json();
-        setUsers(data);
+        setFields(data);
       } catch (error) {
-        setError(error.message);
-      } finally {
-        setLoading(false);
+        console.error('Erreur:', error);
       }
-    };
-
-    fetchUsers();
+    }
+    fetchFields();
   }, []);
-
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error}</div>;
 
   return (
     <div>
-      <h1>Liste des utilisateurs</h1>
+      <h1>Champs de la table users</h1>
       <ul>
-        {users.map((user) => (
-          <li key={user.id}>{user.name} - {user.email}</li>  
+        {fields.map((field, index) => (
+          <li key={index}>{field}</li>
         ))}
       </ul>
     </div>
   );
 }
 
-export default Page;
+export default page;

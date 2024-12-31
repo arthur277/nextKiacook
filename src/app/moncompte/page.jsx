@@ -23,7 +23,12 @@ function page() {
   }, [email]);
 
   if (!userData) {
-    return <p>Chargement des données...</p>;
+
+    return(
+    <div>
+      <p>Connectez vous ou créer un compte</p>
+    </div>
+    )
   }
 
   return (
