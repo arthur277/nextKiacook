@@ -2,7 +2,10 @@
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import styles from "./moncompte.module.css"
+import styles2 from "../devenirCooker/devenircooker.module.css"
 import Link from 'next/link'
+import Image from 'next/image';
+import logomoncompte from '../../Assets/chef.png'
 function page() {
   const searchParams = useSearchParams();
   const email = searchParams.get('email');
@@ -23,12 +26,13 @@ function page() {
       fetchUserData();
     }
   }, [email]);
-
+  
   if (!userData) {
 
     return(
     <div>
-      <p className={styles.moncompte}>Connectez vous ou créer un compte <Link className='position'href="/devenirCooker">ici</Link></p>
+      <p className={styles.moncompte}>Connectez vous <Link className='position'href="/login">ici</Link> ou créer un compte <Link className='position'href="/devenirCooker">ici</Link></p>
+      <Image className={styles.image} src={logomoncompte} alt="Picture of Kiacook" />
     </div>
     )
   }
