@@ -15,7 +15,6 @@ function FormPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Envoi des données à l'API pour les enregistrer dans MySQL
     const response = await fetch('/api/saveUser', {
       method: 'POST',
       headers: {
@@ -25,7 +24,6 @@ function FormPage() {
     });
 
     if (response.ok) {
-      // Redirection vers la page de résultats avec l'email comme paramètre
       router.push(`/moncompte?email=${email}`);
     } else {
       alert('Erreur lors de l\'inscription');

@@ -2,7 +2,6 @@
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import styles from "./moncompte.module.css"
-import styles2 from "../devenirCooker/devenircooker.module.css"
 import Link from 'next/link'
 import Image from 'next/image';
 import logomoncompte from '../../Assets/chef.png'
