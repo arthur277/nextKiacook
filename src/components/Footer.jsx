@@ -3,21 +3,21 @@ import styles from './footer.module.css'
 function Footer() {
   return (
     <div>
-        <div className={styles.debut}><h1>KIACOOK, c'est...</h1></div>
+        <div className={styles.debut}><h1 className={styles.mestitre}>KIACOOK, c'est...</h1></div>
         <div className='row'>
             <div className={styles.texte}>
             <div className='col-md-4'>
-                <h1>+ de 2000 CHEFS PRO, nos cookers</h1>
+                <h1 className={styles.mestexte}>+ de 2000 CHEFS PRO, nos cookers</h1>
             </div>
             </div>
             <div className={styles.texte}>
             <div className='col-md-4'>
-                <h1>+ de 1000 téléchargements, nos fans de cuisines afro</h1>
+                <h1 className={styles.mestexte}>+ de 1000 téléchargements, nos fans de cuisines afro</h1>
             </div>
             </div>
             <div className={styles.texte}>
             <div className='col-md-4'>
-                <h1>+ de 22000 commandes par an!</h1>
+                <h1 className={styles.mestexte}>+ de 22000 commandes par an!</h1>
             </div>
             </div>
         </div>
