@@ -1,6 +1,7 @@
 "use client"
 import { use, useState } from 'react';
 import styles from './trouvercooker.module.css'
+import Link from 'next/link';
 
 async function getUsers() {
   const res = await fetch('http://localhost:3000/api/getAllUser', { cache: 'no-store' });
@@ -32,6 +33,7 @@ export default function Users() {
             <th scope="col">Numéro</th>
             <th scope="col">Nom</th>
             <th scope="col">Specialité</th>
+            <th scope="col">Contact</th>
           </tr>
         </thead>
         <tbody>
@@ -40,6 +42,7 @@ export default function Users() {
               <th scope="row">{user.id}</th>
               <td>{user.nom}</td>
               <td>{user.specialite}</td>
+              <td><Link className=''href="/contact">Contact</Link></td>
             </tr>
           ))}
         </tbody>
