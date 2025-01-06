@@ -1,7 +1,11 @@
 .moncompte{
     text-align: center;
 }
-.image{
-    margin-left: 580px;
-    margin-bottom: -400px;
+
+.container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -300px;
 }

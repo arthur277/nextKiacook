@@ -29,6 +29,7 @@ function contact() {
   };
 
   return (
+    <div className={styles.container}>
     <div className={styles.cadre}>
       <h1>Contactez nous !</h1>
       <h4>decouvrez une experience sans pareil</h4>
@@ -70,6 +71,7 @@ function contact() {
         </div>
         <button className={styles.soumettre} type="submit">Envoyer</button>
       </form>
+    </div>
     </div>
   );
 }

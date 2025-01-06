@@ -15,40 +15,10 @@
   .homeimage img {
     max-width: 100%;  
     height: auto;
-    max-height: 500px; 
+    height: 100%; 
+    object-fit: cover;
   }
   
- /* 
-  .row {
-    margin-top: 30px; 
-  }
-  
-  .col-md-6 {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center; 
-  }
-  
-  .logoImage {
-    width: 100%; 
-    max-width: 500px; 
-    max-height: 400px;
-    float: right;
-    margin-right:150px; 
-      
-  }
-
-  .suivre {
-    text-decoration: none;
-
-  }
- 
-  .milieucontenu{
-    position: relative;
-    margin-right: 20px;
-  } */
-
   
   @media (min-width: 768px) {
     .col-md-6 {

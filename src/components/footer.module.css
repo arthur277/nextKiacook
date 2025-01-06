@@ -11,21 +11,39 @@
     
 }
 .texte{
-   float: left;
-   margin-left: 105px;
-    
-    
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.mestexte{
-        color: #641300;
-        font-family: sans-serif, Georgia, 'Times New Roman', Times, serif;
+.row2{
+    width: 100%;
+    margin: 10px;
+    font-family: sans-serif, Georgia, 'Times New Roman', Times, serif;
+    font-size: 10px;
+    color: #641300;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    padding: auto;
+
+    li{
+        list-style-type: none;
+        padding: 10px;
+        margin: 10px;
+        text-align: center;
+    }
+}
+
+
+/* .mestexte{
+        
+        
         font-size: 18px;
         padding-top: 10px;
         margin-right: 10px;
         text-align: center;
         
-}
+} */
 .parent{
     background-color: #641300;
     margin-top: 100px;

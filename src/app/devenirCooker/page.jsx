@@ -31,6 +31,7 @@ function FormPage() {
   };
 
   return (
+    <div className={styles.container}>
     <div className={styles.cadre}>
       <h1>Formulaire d'inscription</h1>
       <h4>devenez un des nôtres</h4>
@@ -82,6 +83,7 @@ function FormPage() {
         </div>
         <button className={styles.soumettre} type="submit">S'inscrire</button>
       </form>
+    </div>
     </div>
   );
 }
