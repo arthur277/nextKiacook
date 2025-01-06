@@ -29,9 +29,11 @@ function page() {
   if (!userData) {
 
     return(
-    <div>
+      <div>
       <p className={styles.moncompte}>Connectez vous <Link className='position'href="/login">ici</Link> ou créer un compte <Link className='position'href="/devenirCooker">ici</Link></p>
-      <Image className={styles.image} src={logomoncompte} alt="Picture of Kiacook" />
+      <div className={styles.container}>
+        <Image className={styles.image} src={logomoncompte} alt="Picture of Kiacook" />
+      </div>
     </div>
     )
   }

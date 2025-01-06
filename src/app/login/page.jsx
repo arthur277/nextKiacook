@@ -28,7 +28,8 @@ export default function Login() {
 
   return (
     <div>
-      <p className={styles.moncompte}>créer un compte <Link className='position'href="/devenirCooker">ici</Link></p>
+    <p className={styles.moncompte}>créer un compte <Link className='position'href="/devenirCooker">ici</Link></p>
+    <div className={styles.container}>
       <form className={styles2.cadre} onSubmit={handleSubmit}>
         <div className={styles.group}>
         <label className={styles2.label}  htmlFor="email">Email</label>
@@ -52,6 +53,7 @@ export default function Login() {
         </div>
         <button className={styles2.soumettre} type="submit">Se connecter</button>
       </form>
+    </div>
     </div>
   );
 }

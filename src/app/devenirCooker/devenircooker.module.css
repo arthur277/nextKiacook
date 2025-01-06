@@ -4,8 +4,8 @@
     background-color: coral;
     margin-top: 100px;
     width: 500px;
-    margin-left: 500px;
-    margin-bottom: -300px;
+    /* margin-left: 500px;
+    margin-bottom: -300px; */
     .label{
         display: block; 
         margin-right: 20px;
@@ -29,5 +29,12 @@
         margin-top: 20px;
         margin-bottom: 20px;
     }
+}
+.container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -400px;
 }
   

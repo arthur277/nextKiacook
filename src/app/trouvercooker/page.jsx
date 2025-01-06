@@ -1,25 +1,29 @@
 "use client"
-import { use, useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './trouvercooker.module.css'
 import Link from 'next/link';
 
-async function getUsers() {
-  const res = await fetch('http://localhost:3000/api/getAllUser', { cache: 'no-store' });
-  if (!res.ok) {
-    throw new Error('Failed to fetch data');
-  }
-  return res.json();
-}
-
 export default function Users() {
-  const users = use(getUsers());
+  const [users, setUsers] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
+  
+  async function getUsers() {
+    const res = await fetch('http://localhost:3000/api/getAllUser', { cache: 'no-store' });
+    if (!res.ok) {
+      throw new Error('Failed to fetch data');
+    }
+    const data = await res.json();
+    setUsers(data?.slice(indexOfFirstItem, indexOfLastItem));
+  }
+
+  useEffect(() => {
+    getUsers();
+  }, []);
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentUsers = users.slice(indexOfFirstItem, indexOfLastItem);
-
+  
   const totalPages = Math.ceil(users.length / itemsPerPage);
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
@@ -37,7 +41,7 @@ export default function Users() {
           </tr>
         </thead>
         <tbody>
-          {currentUsers.map((user) => (
+          {users.map((user) => (
             <tr key={user.id}>
               <th scope="row">{user.id}</th>
               <td>{user.nom}</td>
