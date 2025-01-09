@@ -27,19 +27,19 @@ function Footer() {
                 <div className={styles.texte2}>
                 <div className='col-md-4'>
                     <h1>Etape 1</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi provident maiores illo iste vel, dolores deserunt eveniet consectetur. Porro sed sapiente debitis mollitia repellendus tempore non autem ullam voluptas qui?</p>
+                    <p>-Vous vous assurez d'être légalement déclaré en tant que cuisinier pro <br /><br /> -Si vous n'êtes pas déclarés, nous vous accompagnons dans les démarches</p>
                 </div>
                 </div>
                 <div className={styles.texte2}>
                 <div className='col-md-4'>
                     <h1>Etape 2</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium minus omnis perspiciatis soluta culpa minima maxime. Veritatis, repudiandae eius! Optio ipsum aliquid aut distinctio praesentium eaque pariatur hic excepturi nihil!</p>
+                    <p>-Vous créez votre compte sur le site <br /><br /> -Vous indiquez les plats que vous cuisinez ainsi que les tarifs que vous appliquez <br /><br /> -Vous indiquez le modèles de livraison choisi <br /><br /> -Et hup vous êtes visibles par la communauté </p>
                 </div>
                 </div>
                 <div className={styles.texte2}>
                 <div className='col-md-4'>
                     <h1>Etape 3</h1>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima eius, quod officia doloremque eos rem suscipit expedita deserunt modi odio consequatur aspernatur similique! Delectus fuga, iusto repudiandae voluptates perspiciatis excepturi?</p>
+                    <p>-Vous recevez vos premières commandes <br /><br />-La plateforme prélève sa commision à chaque plat commandé <br /><br /> -Vous avez la possibilité de booster votre visibilité auprès de notre communauté</p>
                 </div>
                 </div>
             </div>
