@@ -9,7 +9,7 @@ function Navbar() {
   return (
     <nav className={styles.frontcss2}>
       <ul className={styles2.menuList}>
-        <li> <Link className='position'href="/home">Acceuil</Link></li>
+        <li> <Link className='position'href="/home">Accueil</Link></li>
         <li><Link className='position'href="/quisommenous">Qui sommes-nous?</Link></li>
         <li><Link className='position'href="/guideducookeur">Guide du cookeur</Link></li>
         <li><Link className='position'href="/faq">Faq</Link></li>
